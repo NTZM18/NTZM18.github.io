@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nan Sat Sin Moe - Language Enthusiast & Computer Learner</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --light-gray: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: var(--background-color);
+            transition: all 0.3s ease;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            padding: 0 20px;
+        }
+
+        section {
+            margin: 30px 0;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 40px;
+        }
+
+        ul.skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.skills li {
+            background-color: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="language-toggle" id="languageToggle">မြန်မာ</button>
+        <img src="profile.jpg" alt="Nan Sat Sin Moe" class="profile-img">
+        <h1 id="nameTitle">Nan Sat Sin Moe</h1>
+        <h2 id="subtitle">Language Enthusiast & Computer Learner</h2>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2 id="aboutTitle">About Me</h2>
+            <p id="aboutText">Hello! I'm Nan Sat Sin Moe. I completed my high school education at Taung Kalay Monastery School and I'm passionate about learning languages. Currently, I'm studying computer science and technology to expand my knowledge in this digital age.</p>
+        </section>
+
+        <section id="education">
+            <h2 id="educationTitle">Education</h2>
+            <p><strong>Taung Kalay Monastery School</strong> - <span id="educationDegree">High School Diploma</span></p>
+        </section>
+
+        <section id="skills">
+            <h2 id="skillsTitle">Skills & Interests</h2>
+            <ul class="skills">
+                <li id="skill1">Language Learning</li>
+                <li id="skill2">Computer Basics</li>
+                <li id="skill3">Web Development</li>
+                <li id="skill4">Buddhist Studies</li>
+                <li id="skill5">Teaching</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 id="contactTitle">Contact Me</h2>
+            <p>Email: nansatsinmoe@example.com</p>
+            <p>Phone: +95 9XXXXXXXX</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p id="footerText">&copy; <span id="currentYear"></span> Nan Sat Sin Moe. All rights reserved.</p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Current year for footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Language toggle functionality
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = 'english';
+
+        // Burmese translations
+        const translations = {
+            english: {
+                nameTitle: "Nan Sat Sin Moe",
+                subtitle: "Language Enthusiast & Computer Learner",
+                aboutTitle: "About Me",
+                aboutText: "Hello! I'm Nan Sat Sin Moe. I completed my high school education at Taung Kalay Monastery School and I'm passionate about learning languages. Currently, I'm studying computer science and technology to expand my knowledge in this digital age.",
+                educationTitle: "Education",
+                educationDegree: "High School Diploma",
+                skillsTitle: "Skills & Interests",
+                skill1: "Language Learning",
+                skill2: "Computer Basics",
+                skill3: "Web Development",
+                skill4: "Buddhist Studies",
+                skill5: "Teaching",
+                contactTitle: "Contact Me",
+                footerText: "© {year} Nan Sat Sin Moe. All rights reserved."
+            },
+            burmese: {
+                nameTitle: "နန်းသဇင်မိုး",
+                subtitle: "ဘာသာစကားလေ့လာသူနှင့် ကွန်ပျူတာလေ့လာသူ",
+                aboutTitle: "ကျွန်မအကြောင်း",
+                aboutText: "မင်္ဂလာပါ။ ကျွန်မနာမည်က နန်းသဇင်မိုးပါ။ တောင်ကလေးဘုန်းတော်ကြီးကျောင်းမှာ အထက်တန်းပညာသင်ကြားပြီးပါပြီ။ ဘာသာစကားလေ့လာရတာကို အထူးစိတ်ဝင်စားပါတယ်။ အခုတော့ ကွန်ပျူတာနည်းပညာကို လေ့လာနေပါတယ်။",
+                educationTitle: "ပညာရေး",
+                educationDegree: "အထက်တန်းအောင်မြင်ခဲ့သည်",
+                skillsTitle: "ကျွမ်းကျင်မှုများနှင့် စိတ်ဝင်စားမှုများ",
+                skill1: "ဘာသာစကားလေ့လာခြင်း",
+                skill2: "ကွန်ပျူတာအခြေခံ",
+                skill3: "ဝက်ဘ်ဒီဇိုင်း",
+                skill4: "ဗုဒ္ဓဘာသာလေ့လာမှု",
+                skill5: "သင်ကြားပို့ချခြင်း",
+                contactTitle: "ဆက်သွယ်ရန်",
+                footerText: "© {year} နန်းသဇင်မိုး။ မူပိုင်ခွင့်အားလုံးရှိသည်။"
+            }
+        };
+
+        languageToggle.addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'english' ? 'burmese' : 'english';
+            languageToggle.textContent = currentLanguage === 'english' ? 'မြန်မာ' : 'English';
+            
+            // Update all text elements
+            for (const [key, value] of Object.entries(translations[currentLanguage])) {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (key === 'footerText') {
+                        element.textContent = value.replace('{year}', new Date().getFullYear());
+                    } else {
+                        element.textContent = value;
+                    }
+                }
+            }
+        });
+
+        // Animation for sections when scrolling
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
