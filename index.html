@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ကျွန်မရဲ့ကိုယ်ပိုင်စာမျက်နှာ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>မင်္ဂလာပါ!</h1>
+            <p>ကျွန်မရဲ့ကိုယ်ပိုင်စာမျက်နှာကိုကြိုဆိုပါတယ်</p>
+        </header>
+        
+        <div class="section">
+            <h2>ကျွန်မအကြောင်း</h2>
+            <p>ကျွန်မက အထက်တန်းကျောင်းသူတစ်ယောက်ဖြစ်ပြီး ဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းမှာ ပညာသင်ကြားနေပါတယ်။</p>
+            <div id="school-image"></div>
+        </div>
+        
+        <div class="section">
+            <h2>ကျွန်မရဲ့ဝါသနာများ</h2>
+            
+            <div class="hobby">
+                <div class="hobby-icon"><i class="fas fa-futbol"></i></div>
+                <div>ဘောလုံးကန်ရတာကို အရမ်းကြိုက်ပါတယ်</div>
+            </div>
+            
+            <div class="hobby">
+                <div class="hobby-icon"><i class="fas fa-language"></i></div>
+                <div>ဘာသာစကားလေ့လာရတာ ဝါသနာပါပါတယ်</div>
+            </div>
+            
+            <div class="hobby">
+                <div class="hobby-icon"><i class="fas fa-music"></i></div>
+                <div>သီချင်းဆိုရတာကို အရမ်းစိတ်ဝင်စားပါတယ်</div>
+            </div>
+
+            <button id="hobby-button" onclick="showMoreHobbies()">နောက်ထပ်ဝါသနာများ</button>
+            <div id="more-hobbies" class="hidden">
+                <div class="hobby">
+                    <div class="hobby-icon"><i class="fas fa-book"></i></div>
+                    <div>စာဖတ်ရတာလည်း ကြိုက်ပါတယ်</div>
+                </div>
+                <div class="hobby">
+                    <div class="hobby-icon"><i class="fas fa-utensils"></i></div>
+                    <div>ချက်ပြုတ်ရတာလည်း ဝါသနာပါပါတယ်</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>ကျွန်မနဲ့ဆက်သွယ်ရန်</h2>
+            <p>ကျွန်မနဲ့ဆက်သွယ်ချင်ရင် အောက်ပါလိပ်စာကို ဆက်သွယ်နိုင်ပါတယ်။</p>
+            <p>အီးမေးလ်: <a href="mailto:example@example.com">example@example.com</a></p>
+            
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; <span id="current-year"></span> ကျွန်မရဲ့ကိုယ်ပိုင်စာမျက်နှာ</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
